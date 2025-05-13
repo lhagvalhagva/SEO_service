@@ -24,3 +24,48 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Quill Editor Styles */
+.ql-toolbar.ql-snow {
+  border-radius: 8px 8px 0 0; /* Toolbar-ийн дээд булангуудыг бөөрөнхийлөх */
+  border-color: #ccc;
+}
+
+.ql-container.ql-snow {
+  border-radius: 0 0 8px 8px; /* Editor container-ийн доод булангуудыг бөөрөнхийлөх */
+  border-color: #ccc;
+}
+
+.ql-editor {
+  min-height: 250px; /* Editor-ийн анхны өндөр, агуулгаа дагаад сунана */
+  font-size: 16px; /* Editor доторх текстийн хэмжээ */
+  line-height: 1.6;
+  padding: 12px 15px;
+  background-color: white; /* Editor-ийн дэвсгэр өнгө */
+}
+
+.ql-editor.ql-blank::before {
+  color: rgba(0,0,0,0.4); /* Placeholder текстийн өнгө */
+  font-style: normal; /* Placeholder текстийг italic биш болгох */
+  left: 15px; /* Placeholder-ийн зүүн зай */
+  right: 15px; /* Placeholder-ийн баруун зай */
+}
+
+/* Scrollbar style (optional, for better UX on overflow) */
+.ql-editor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ql-editor::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.ql-editor::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.ql-editor::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
